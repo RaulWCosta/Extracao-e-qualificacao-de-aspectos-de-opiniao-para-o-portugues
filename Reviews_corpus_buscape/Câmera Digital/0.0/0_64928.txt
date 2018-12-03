@@ -1,0 +1,7 @@
+É uma camera ótima. Mas na que eu usei está dando um erro de codec.
+Os DVDs players que fiz testes não leram os arq. *.jpeg tirado da camera sansung digital sl102.
+DVD player utilizado: SAMSUNG DVD-1080KR.
+
+O que gostei: Ótima para filmar em 640x480 em 30 quadros, tira ótimas fotos em todos os tamanhos. Duração da bateia ótima.
+
+O que não gostei: Não está lendo arquivos *. jpeg na maioria dos DVDs players.

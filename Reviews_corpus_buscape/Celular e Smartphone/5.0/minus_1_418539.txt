@@ -1,0 +1,1 @@
+Tenho um S3 e quero passar pra o S4

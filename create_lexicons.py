@@ -4,9 +4,9 @@ import nltk
 import gensim
 import numpy as np
 from enelvo import normaliser
+import fnmatch
 
 def pre_processing_text(text, use_normalizer=False):
-
     
     if use_normalizer:
         norm = normaliser.Normaliser()
@@ -25,13 +25,26 @@ def pre_processing_text(text, use_normalizer=False):
     return text
 
 def create_aspects_lexicon_nouns(frequency_cut=0.03, save=False):
-    #--------------------------------------------------------------------------------------
+
     with open("tagger.pkl", "rb") as f:
         tagger = pickle.load(f)
 
-    all_reviews = np.load("Nonprocessed_Reviews.npy")
+    try:
+        with(open("Nonprocessed_Reviews.p", "rb")) as f:
+            all_reviews = pickle.load(f)
+    except:
+        print("Nonprocessed_Reviews.p couldn't be found. All reviews will be loaded from txt files, this will take a fell minutes")
+        all_reviews = []
+        for dirpath, _, files in os.walk("./Reviews_corpus_buscape"):
+            for filename in fnmatch.filter(files, '*.txt'):
+                f = open(os.path.join(dirpath, filename), "r", encoding="utf8")
+                review = f.read()
+                # review = pre_processing_text(review, use_normalizer=True)
+                all_reviews.append(review)
+        with open("Nonprocessed_Reviews.p", "wb") as f:
+            pickle.dump(all_reviews, f)
+
     portuguese_sent_tokenizer = nltk.data.load("tokenizers/punkt/portuguese.pickle")
-    #---------------------------------------------------------------------------------------
     
     noun_words = {}
     aspects =[]

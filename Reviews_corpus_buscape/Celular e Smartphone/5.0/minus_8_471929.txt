@@ -1,0 +1,114 @@
+bom vou escrever tudo que sei espero que eu consiga
+
+nformações técnicas
+Marca
+Motorola
+Referência
+RAZR D1.
+Cor
+Preto
+Modelo
+D1
+Linha
+Razr
+Operadora
+Desbloqueado TIM
+Tecnologia
+não
+GSM;
+- EDGE;
+- GPRS.
+Sistema Operacional
+Modelo
+Android
+Versão
+4.1 - Jelly Bean.
+Tela Principal
+Tamanho
+3.5" TFT Capacitivo (Pinch Zoom).
+Resolução
+320x480 (HVGA).
+Número de cores
+16M.
+Chip incluso
+não
+SIM Card Chip Tamanho Padrão (2FF).
+Touch Screen
+sim
+Quantidade de chip
+2
+Localização
+GPS
+sim
+A-GPS
+sim
+Bússola
+não
+Conectividade
+Bluetooth
+4.0
+Wi-Fi
+Sim
+802.11 b/g/n.
+Foto
+Número de pixels
+5.0
+Zoom digital
+4x
+Foco automático
+sim
+Vídeo
+Grava vídeos
+sim
+com áudio.
+Formatos de vídeo
+AMR, AAC(3gp).
+Música
+Toques
+MP3
+MP3 Player
+sim
+Rádio FM
+sim
+Formatos de áudio compatíveis
+AMR, AMRWD, MID, MIDI, X-MIDI, MP3, X-MP3, MPEG3, X-MPEG3, iMELODY, WAV, X-WAV, 3GPP, MP4, AAC, AAC+, EAAC+.
+Armazenamento
+Capacidade da memória interna
+4 GB (2.5 GB disponíveis ao usuário) - RAM 1 GB.
+Tipo de cartão suportado
+micro SD
+Capacidade do cartão de memória
+até 32 GB.
+Agenda
+Número de contatos
+limitado pela memória.
+Recursos de chamada
+Identificador de chamadas
+sim
+Viva-Voz
+sim
+E-mail e mensagens
+E-mails pessoais
+sim
+Exchange (POP3, IMAP4/SMTP).
+Edição de arquivos Office
+não - apenas visualização.
+SMS
+sim
+MMS
+sim
+Digitação rápida e inteligente de texto
+sim.
+Acesso às redes sociais
+sim.
+Sincronização
+sim.
+Aplicativos
+Exclusivos
+- Youtube;
+- Gmail;
+- Google Talk;
+- Google Street View;
+- Google Maps;
+- Google Calendar;
+- Google

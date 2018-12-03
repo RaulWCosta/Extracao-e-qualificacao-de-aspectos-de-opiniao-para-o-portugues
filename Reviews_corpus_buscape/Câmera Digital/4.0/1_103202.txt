@@ -1,0 +1,5 @@
+Estou bastante satisfeita com a máquina. Atendeu as minhas expectativas, só estou tendo um pouco de dificuldade com o face detection, pois a máquina não detecta os rostos com facilidade.
+
+O que gostei: Imagem ótima, facilidade na programação
+
+O que não gostei: Dificuldade para usar o face detection

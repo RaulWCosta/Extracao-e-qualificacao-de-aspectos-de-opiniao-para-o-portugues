@@ -2,6 +2,7 @@ import gensim
 import numpy as np
 import os
 import pickle
+import fnmatch
 from enelvo import normaliser
 
 def pre_processing_text(text, use_normalizer=False):
@@ -23,19 +24,23 @@ def pre_processing_text(text, use_normalizer=False):
     return text
 
 
-def process_reviews():
-	all_reviews = np.load("Nonprocessed_Reviews.npy")
-
-	for i in range(len(all_reviews)):
-		all_reviews[i] = pre_processing_text(all_reviews[i], use_normalizer=True)
-
-	with open("Processed_Reviews.p", "wb") as f:
-		all_reviews = pickle.dump(f)
-
-
 all_tokenized_reviews = []
-with(open("Processed_Reviews.p", "rb")) as f:
-	all_reviews = pickle.load(f)
+
+try:
+    with(open("Processed_Reviews.p", "rb")) as f:
+        all_reviews = pickle.load(f)
+except:
+    print("Processed_Reviews.p couldn't be found. All reviews will be loaded from txt files, this will take a fell minutes")
+    all_reviews = []
+    for dirpath, _, files in os.walk("./Reviews_corpus_buscape"):
+        for filename in fnmatch.filter(files, '*.txt'):
+            f = open(os.path.join(dirpath, filename), "r", encoding="utf8")
+            review = f.read()
+            review = pre_processing_text(review, use_normalizer=True)
+            all_reviews.append(review)
+    with open("Processed_Reviews.p", "wb") as f:
+        pickle.dump(all_reviews, f)
+
 for review in all_reviews:
 	tokenized_review = gensim.utils.simple_preprocess(review)
 	all_tokenized_reviews.append(tokenized_review)
@@ -43,6 +48,3 @@ for review in all_reviews:
 model = gensim.models.Word2Vec(all_tokenized_reviews, size=600, window=7, min_count=1, workers=4)
 model.train(all_tokenized_reviews, total_examples=len(all_tokenized_reviews), epochs=900)
 model.save("word2vec.model")
-
-
-
