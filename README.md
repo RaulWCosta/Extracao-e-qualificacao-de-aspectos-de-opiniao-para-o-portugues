@@ -1,1 +1,0 @@
-# Extra-o-e-qualifica-o-de-aspectos-de-opini-o-para-o-portugu-s
